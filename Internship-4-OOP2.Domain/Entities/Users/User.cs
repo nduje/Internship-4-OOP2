@@ -28,9 +28,18 @@ namespace Internship_4_OOP2.Domain.Entities.Users
         public DateTime? UpdatedAt { get; set; }
         public bool IsActive { get; set; }
 
-        public async Task<Result<int?>> Create()
+        public async Task<Result<bool>> Create(IUserRepository userRepository)
         {
+            var validationResult = await CreateOrUpdateValidation();
 
+            if (validationResult.HasError)
+            {
+                return new Result<bool>(false, validationResult);
+            }
+
+            await userRepository.InsertAsync(this);
+
+            return new Result<bool>(true, validationResult);
         }
 
         public async Task<ValidationResult> CreateOrUpdateValidation()
