@@ -1,6 +1,7 @@
 ﻿using Internship_4_OOP2.Domain.Common.Model;
 using Internship_4_OOP2.Domain.Common.Validation;
 using Internship_4_OOP2.Domain.Common.Validation.ValidationItems;
+using Internship_4_OOP2.Domain.Persistence.Users;
 
 namespace Internship_4_OOP2.Domain.Entities.Users
 {
@@ -24,8 +25,8 @@ namespace Internship_4_OOP2.Domain.Entities.Users
         public double? GeoLng { get; set; }
         public string? Website { get; set; }
         public string Password { get; set; }
-        public DateTime? CreatedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public bool IsActive { get; set; }
 
         public async Task<Result<bool>> Create(IUserRepository userRepository)
