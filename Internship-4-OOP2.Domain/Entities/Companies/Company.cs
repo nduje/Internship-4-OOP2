@@ -40,6 +40,8 @@ namespace Internship_4_OOP2.Domain.Entities.Companies
                 validationResult.AddValidationItem(ValidationItems.Company.NameMaxLength);
             }
 
+            //TODO: NameUnique
+
             return validationResult;
         }
     }

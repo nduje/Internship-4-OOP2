@@ -61,6 +61,134 @@
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };
+
+            public static readonly ValidationItem NameNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}8",
+                Message = $"Ime ne smije ostati prazno",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem UsernameNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}9",
+                Message = $"Korisničko ime ne smije ostati prazno",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem EmailNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}10",
+                Message = $"Email ne smije ostati prazan",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem AddressStreetNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}11",
+                Message = $"Adresa ulice ne smije ostati prazna",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem AddressCityNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}12",
+                Message = $"Adresa grada ne smije ostati prazna",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem GeoLatNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}13",
+                Message = $"Geografska širina ne smije ostati prazna",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem GeoLngNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}14",
+                Message = $"Geografska dužina ne smije ostati prazna",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem PassworNullOrEmpty = new ValidationItem
+            {
+                Code = $"{CodePrefix}15",
+                Message = $"Lozinka ne smije ostati prazna",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem UsernameUnique = new ValidationItem
+            {
+                Code = $"{CodePrefix}16",
+                Message = $"Korisničko ime već postoji u sustavu",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem EmailUnique = new ValidationItem
+            {
+                Code = $"{CodePrefix}17",
+                Message = $"Email već postoji u sustavu",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem NameValid = new ValidationItem
+            {
+                Code = $"{CodePrefix}18",
+                Message = $"Ime nije validno",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem UsernameValid = new ValidationItem
+            {
+                Code = $"{CodePrefix}19",
+                Message = $"Korisničko ime nije validno",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem EmailValid = new ValidationItem
+            {
+                Code = $"{CodePrefix}20",
+                Message = $"Email nije validan",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem GeoLatValid = new ValidationItem
+            {
+                Code = $"{CodePrefix}21",
+                Message = $"Geografska širina nije validna",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem GeoLngValid = new ValidationItem
+            {
+                Code = $"{CodePrefix}22",
+                Message = $"Geografska dužina nije validna",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
+
+            public static readonly ValidationItem WebsiteValid = new ValidationItem
+            {
+                Code = $"{CodePrefix}23",
+                Message = $"Website URL nije validan",
+                ValidationSeverity = ValidationSeverity.Error,
+                ValidationType = ValidationType.FormalValidation
+            };
         }
     }
 }

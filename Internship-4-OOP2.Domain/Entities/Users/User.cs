@@ -2,6 +2,7 @@
 using Internship_4_OOP2.Domain.Common.Validation;
 using Internship_4_OOP2.Domain.Common.Validation.ValidationItems;
 using Internship_4_OOP2.Domain.Persistence.Users;
+using System.Text.RegularExpressions;
 
 namespace Internship_4_OOP2.Domain.Entities.Users
 {
@@ -80,6 +81,80 @@ namespace Internship_4_OOP2.Domain.Entities.Users
             if (Password?.Length > PasswordMaxLength)
             {
                 validationResult.AddValidationItem(ValidationItems.User.PasswordMaxLength);
+            }
+
+            if (string.IsNullOrEmpty(Name))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.NameNullOrEmpty);
+            }
+
+            if (string.IsNullOrEmpty(Username))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.UsernameValid);
+            }
+
+            if (string.IsNullOrEmpty(Email))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.EmailNullOrEmpty);
+            }
+
+            if (string.IsNullOrEmpty(AddressStreet))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.AddressStreetNullOrEmpty);
+            }
+
+            if (string.IsNullOrEmpty(AddressCity))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.AddressCityNullOrEmpty);
+            }
+
+            if (GeoLat == null)
+            {
+                validationResult.AddValidationItem(ValidationItems.User.GeoLatNullOrEmpty);
+            }
+
+            if (GeoLng == null)
+            {
+                validationResult.AddValidationItem(ValidationItems.User.GeoLngNullOrEmpty);
+            }
+
+            if (Password == null)
+            {
+                validationResult.AddValidationItem(ValidationItems.User.PassworNullOrEmpty);
+            }
+
+            // TODO: UsernameUnique
+
+            // TODO: EmailUnique
+
+            if (!Regex.IsMatch(Name, @"^[A-Za-z ]+$"))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.NameValid);
+            }
+
+            if (!Regex.IsMatch(Username, @"^[A-Za-z0-9 ]+$"))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.UsernameValid);
+            }
+
+            if (!Regex.IsMatch(Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.EmailValid);
+            }
+
+            if (GeoLat < -90 || GeoLat > 90)
+            {
+                validationResult.AddValidationItem(ValidationItems.User.GeoLatValid);
+            }
+
+            if (GeoLng < -180 || GeoLng > 180)
+            {
+                validationResult.AddValidationItem(ValidationItems.User.GeoLngValid);
+            }
+
+            if (!Regex.IsMatch(Website, @"^(https?:\/\/)?([\w\-]+\.)+[\w\-]{2,}(\/\S*)?$"))
+            {
+                validationResult.AddValidationItem(ValidationItems.User.WebsiteValid);
             }
 
             return validationResult;
