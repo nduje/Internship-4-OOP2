@@ -2,7 +2,6 @@
 using Internship_4_OOP2.Domain.Persistence.Users;
 using Internship_4_OOP2.Infrastructure.Database;
 using Internship_4_OOP2.Infrastructure.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace Internship_4_OOP2.Infrastructure.Repositories
 {
@@ -15,27 +14,6 @@ namespace Internship_4_OOP2.Infrastructure.Repositories
         {
             _dbContext = dbContext;
             _dapperManager = dapperManager;
-        }
-
-        public async Task<User> GetById(int id)
-        {
-            var sql =
-            """
-                SELECT
-                    id AS Id,
-                    name AS Name
-                FROM
-                    public.users
-                WHERE
-                    id = @Id
-            """;
-
-            var parameters = new
-            {
-                Id = id
-            };
-
-            return await _dapperManager.QuerySingleAsync<User>(sql, parameters);
         }
     }
 }

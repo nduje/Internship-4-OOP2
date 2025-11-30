@@ -1,6 +1,6 @@
 ﻿using Internship_4_OOP2.Domain.Entities;
 
-namespace Internship_4_OOP2.Domain.Common.Model
+namespace Internship_4_OOP2.Domain.Common.Request
 {
     public class GetAllUsersRequest
     {

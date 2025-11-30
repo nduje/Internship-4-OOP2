@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internship-4-OOP2.Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0140AC60-6BD2-416F-9B6E-D0EBC92EF740}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internship-4-OOP2.Application", "Internship-4-OOP2.Application\Internship-4-OOP2.Application.csproj", "{50999ABC-4EE6-48DA-A004-93FC66F71BEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internship-4-OOP2.Infrastructure", "Internship-4-OOP2.Infrastructure\Internship-4-OOP2.Infrastructure.csproj", "{407E32F9-5ABF-4814-A539-3F55FBE6EA02}"

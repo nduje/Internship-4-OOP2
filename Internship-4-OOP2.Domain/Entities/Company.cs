@@ -1,9 +1,4 @@
-﻿using Internship_4_OOP2.Domain.Common.Model;
-using Internship_4_OOP2.Domain.Common.Validation;
-using Internship_4_OOP2.Domain.Common.Validation.ValidationItems;
-using Internship_4_OOP2.Domain.Persistence.Companies;
-
-namespace Internship_4_OOP2.Domain.Entities
+﻿namespace Internship_4_OOP2.Domain.Entities
 {
     public class Company
     {

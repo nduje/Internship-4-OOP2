@@ -1,4 +1,4 @@
-﻿using Internship_4_OOP2.Domain.Common.Model;
+﻿using Internship_4_OOP2.Domain.Common.Request;
 
 namespace Internship_4_OOP2.Domain.Persistence.Common
 {
