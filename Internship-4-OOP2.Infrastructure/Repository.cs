@@ -15,16 +15,15 @@ namespace Internship_4_OOP2.Infrastructure
             _dbSet = _context.Set<TEntity>();
         }
 
-        public Task<GetAllResponse<TEntity>> Get()
+        public async Task<GetAllResponse<TEntity>> Get()
         {
-            var entities = _dbSet.ToListAsync();
+            var entities = await _dbSet.ToListAsync();
             return new GetAllResponse<TEntity> { Values = entities };
         }
 
         public async Task InsertAsync(TEntity entity)
         {
             await _dbSet.AddAsync(entity);
-            // await _context.SaveChangesAsync();
         }
 
         public void Update(TEntity entity)

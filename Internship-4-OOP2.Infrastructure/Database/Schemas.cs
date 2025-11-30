@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Internship_4_OOP2.Infrastructure.Database
+﻿namespace Internship_4_OOP2.Infrastructure.Database
 {
     internal static class Schemas
     {
