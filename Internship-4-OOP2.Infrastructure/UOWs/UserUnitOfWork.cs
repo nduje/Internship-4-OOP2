@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Internship_4_OOP2.Infrastructure.Repositories
+namespace Internship_4_OOP2.Infrastructure.UOWs
 {
     internal class UserUnitOfWork : IUserUnitOfWork
     {

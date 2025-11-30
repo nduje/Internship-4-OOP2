@@ -4,11 +4,6 @@ namespace Internship_4_OOP2.Domain.Persistence.Common
 {
     public interface IRepository<TEntity, TId> where TEntity : class
     {
-        Task<GetAllRequest<TEntity>> Get();
         Task<GetAllUsersRequest> GetUsers();
-        Task InsertAsync(TEntity entity);
-        void Update(TEntity entity);
-        Task DeleteAsync(TId id);
-        void Delete(TEntity? entity);
     }
 }

@@ -1,6 +1,7 @@
 ﻿
 using Dapper;
 using Internship_4_OOP2.Application.Common.Model;
+using Internship_4_OOP2.Infrastructure.Interfaces;
 using Npgsql;
 
 namespace Internship_4_OOP2.Infrastructure

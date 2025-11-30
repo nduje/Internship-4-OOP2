@@ -1,6 +1,7 @@
-﻿using Internship_4_OOP2.Domain.Entities.Users;
+﻿using Internship_4_OOP2.Domain.Entities;
 using Internship_4_OOP2.Domain.Persistence.Users;
 using Internship_4_OOP2.Infrastructure.Database;
+using Internship_4_OOP2.Infrastructure.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Internship_4_OOP2.Infrastructure.Repositories

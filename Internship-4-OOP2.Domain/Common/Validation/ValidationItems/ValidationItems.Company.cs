@@ -9,7 +9,7 @@
             public static readonly ValidationItem NameMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}24",
-                Message = $"Ime ne smije biti duže od {Entities.Companies.Company.NameMaxLength} znakova",
+                Message = $"Ime ne smije biti duže od {Entities.Company.NameMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };

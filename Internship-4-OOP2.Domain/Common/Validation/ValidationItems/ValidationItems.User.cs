@@ -9,7 +9,7 @@
             public static readonly ValidationItem NameMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}1",
-                Message = $"Ime ne smije biti duže od {Entities.Users.User.NameMaxLength} znakova",
+                Message = $"Ime ne smije biti duže od {Entities.User.NameMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };
@@ -17,7 +17,7 @@
             public static readonly ValidationItem UsernameMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}2",
-                Message = $"Korisničko ime ne smije biti duže od {Entities.Users.User.UsernameMaxLength} znakova",
+                Message = $"Korisničko ime ne smije biti duže od {Entities.User.UsernameMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };
@@ -25,7 +25,7 @@
             public static readonly ValidationItem EmailMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}3",
-                Message = $"Email ne smije biti duži od {Entities.Users.User.EmailMaxLength} znakova",
+                Message = $"Email ne smije biti duži od {Entities.User.EmailMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };
@@ -33,7 +33,7 @@
             public static readonly ValidationItem AddressStreetMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}4",
-                Message = $"Adresa ulice ne smije biti duža od {Entities.Users.User.AddressStreetMaxLength} znakova",
+                Message = $"Adresa ulice ne smije biti duža od {Entities.User.AddressStreetMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };
@@ -41,7 +41,7 @@
             public static readonly ValidationItem AddressCityMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}5",
-                Message = $"Adresa grada ne smije biti duža od {Entities.Users.User.AddressCityMaxLength} znakova",
+                Message = $"Adresa grada ne smije biti duža od {Entities.User.AddressCityMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };
@@ -49,7 +49,7 @@
             public static readonly ValidationItem WebsiteMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}6",
-                Message = $"Website ne smije biti duži od {Entities.Users.User.WebsiteMaxLength} znakova",
+                Message = $"Website ne smije biti duži od {Entities.User.WebsiteMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };
@@ -57,7 +57,7 @@
             public static readonly ValidationItem PasswordMaxLength = new ValidationItem
             {
                 Code = $"{CodePrefix}7",
-                Message = $"Lozinka ne smije biti duža od {Entities.Users.User.PasswordMaxLength} znakova",
+                Message = $"Lozinka ne smije biti duža od {Entities.User.PasswordMaxLength} znakova",
                 ValidationSeverity = ValidationSeverity.Error,
                 ValidationType = ValidationType.FormalValidation
             };

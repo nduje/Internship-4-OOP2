@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Database\Configurations\Common\" />
+    <Compile Remove="Database\Configurations\Common\**" />
+    <EmbeddedResource Remove="Database\Configurations\Common\**" />
+    <None Remove="Database\Configurations\Common\**" />
   </ItemGroup>
 
   <ItemGroup>

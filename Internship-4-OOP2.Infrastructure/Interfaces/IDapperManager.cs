@@ -1,4 +1,4 @@
-﻿namespace Internship_4_OOP2.Infrastructure
+﻿namespace Internship_4_OOP2.Infrastructure.Interfaces
 {
     public interface IDapperManager
     {

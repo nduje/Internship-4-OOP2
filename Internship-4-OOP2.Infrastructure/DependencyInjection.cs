@@ -1,7 +1,9 @@
 ﻿using Internship_4_OOP2.Domain.Persistence.Common;
 using Internship_4_OOP2.Domain.Persistence.Users;
 using Internship_4_OOP2.Infrastructure.Database;
+using Internship_4_OOP2.Infrastructure.Interfaces;
 using Internship_4_OOP2.Infrastructure.Repositories;
+using Internship_4_OOP2.Infrastructure.UOWs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

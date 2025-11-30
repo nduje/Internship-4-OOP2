@@ -1,10 +1,8 @@
-﻿using Internship_4_OOP2.Domain.Common.Model;
-using Internship_4_OOP2.Domain.Common.Validation;
+﻿using Internship_4_OOP2.Domain.Common.Validation;
 using Internship_4_OOP2.Domain.Common.Validation.ValidationItems;
-using Internship_4_OOP2.Domain.Persistence.Users;
 using System.Text.RegularExpressions;
 
-namespace Internship_4_OOP2.Domain.Entities.Users
+namespace Internship_4_OOP2.Domain.Entities
 {
     public class User
     {
@@ -29,20 +27,6 @@ namespace Internship_4_OOP2.Domain.Entities.Users
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public bool IsActive { get; set; }
-
-        public async Task<Result<int?>> Create(IUserRepository userRepository)
-        {
-            var validationResult = await CreateOrUpdateValidation();
-
-            if (validationResult.HasError)
-            {
-                return new Result<int?>(null, validationResult);
-            }
-
-            await userRepository.InsertAsync(this);
-
-            return new Result<int?>(Id, validationResult);
-        }
 
         public async Task<ValidationResult> CreateOrUpdateValidation()
         {

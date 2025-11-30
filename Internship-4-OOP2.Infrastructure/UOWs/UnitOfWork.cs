@@ -2,7 +2,7 @@
 using Internship_4_OOP2.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Internship_4_OOP2.Infrastructure
+namespace Internship_4_OOP2.Infrastructure.UOWs
 {
     public sealed class UnitOfWork : IUnitOfWork
     {
