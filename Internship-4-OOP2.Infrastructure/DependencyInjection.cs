@@ -16,7 +16,6 @@ namespace Internship_4_OOP2.Infrastructure
             IConfiguration configuration)
         {
             AddDatabase(services, configuration);
-            AddRepositories(services);
             return services;
         }
 
@@ -24,13 +23,21 @@ namespace Internship_4_OOP2.Infrastructure
         {
             string? connectionString = configuration.GetConnectionString("Database");
             if (string.IsNullOrEmpty(connectionString))
+            {
                 throw new ArgumentNullException(nameof(connectionString));
+            }
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(connectionString));
 
+            AddRepositories(services);
+
             services.AddSingleton<IDapperManager>(sp =>
-                new DapperManager(connectionString));
+            {
+                var config = sp.GetRequiredService<IConfiguration>();
+                string cs = config.GetConnectionString("Database");
+                return new DapperManager(cs);
+            });
         }
 
         private static void AddRepositories(IServiceCollection services)

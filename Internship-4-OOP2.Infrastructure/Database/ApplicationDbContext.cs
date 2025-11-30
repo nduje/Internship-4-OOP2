@@ -16,6 +16,7 @@ namespace Internship_4_OOP2.Infrastructure.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+            
             modelBuilder.HasDefaultSchema(Schemas.Default);
         }
     }
