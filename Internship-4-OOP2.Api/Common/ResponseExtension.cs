@@ -1,4 +1,5 @@
 ﻿using Internship_4_OOP2.Application.Common.Model;
+using Internship_4_OOP2.Application.Common.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Internship_4_OOP2.Api.Common

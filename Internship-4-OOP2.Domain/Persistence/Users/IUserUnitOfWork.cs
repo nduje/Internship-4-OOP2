@@ -1,6 +1,8 @@
-﻿namespace Internship_4_OOP2.Domain.Persistence.Users
+﻿using Internship_4_OOP2.Domain.Persistence.Common;
+
+namespace Internship_4_OOP2.Domain.Persistence.Users
 {
-    public interface IUserUnitOfWork
+    public interface IUserUnitOfWork : IUnitOfWork
     {
         IUserRepository Repository { get; }
     }

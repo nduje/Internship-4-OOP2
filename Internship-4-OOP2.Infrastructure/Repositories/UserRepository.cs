@@ -10,8 +10,9 @@ namespace Internship_4_OOP2.Infrastructure.Repositories
         private readonly ApplicationDbContext _dbContext;
         private readonly IDapperManager _dapperManager;
 
-        public UserRepository(DbContext dbContext, IDapperManager dapperManager) : base(dbContext)
+        public UserRepository(ApplicationDbContext dbContext, IDapperManager dapperManager) : base(dbContext)
         {
+            _dbContext = dbContext;
             _dapperManager = dapperManager;
         }
 

@@ -15,7 +15,7 @@ namespace Internship_4_OOP2.Infrastructure.Database.Configurations.Users
                 .HasColumnName("id");
 
             builder.Property(u => u.Name)
-                .HasColumnName("first_name");
+                .HasColumnName("name");
 
             builder.Property(u => u.Username)
                 .HasColumnName("username");
